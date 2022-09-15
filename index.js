@@ -23,9 +23,9 @@ const calculateNewRgb = (color) => {
   let indexOfFirstComma = color.indexOf(',');
   let indexOfSecondComma = color.indexOf(',', color.indexOf(',') + 1);
   let indexOfCloseParens = color.indexOf(')');
-  let r = parseFloat(color.slice(4, indexOfFirstComma));
-  let g = parseFloat(color.slice(indexOfFirstComma + 1, indexOfSecondComma));
-  let b = parseFloat(color.slice(indexOfSecondComma + 1, indexOfCloseParens));
+  let r = parseInt(color.slice(4, indexOfFirstComma));
+  let g = parseInt(color.slice(indexOfFirstComma + 1, indexOfSecondComma));
+  let b = parseInt(color.slice(indexOfSecondComma + 1, indexOfCloseParens));
 
   if (r <= 5 || g <= 5 || b <= 5) return;
   let newR = r - 25;
